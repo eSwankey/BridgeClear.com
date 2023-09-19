@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BridgeClear</title>
+    <title>Minimalist Web App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,19 +84,10 @@
             padding: 10px;
             display: flex;
             flex-direction: row;
-            background-color: white;
             align-items: center;
             border-style: solid;
             border-color: #f0f0f0;
             border-radius: 10px;
-        }
-
-        .item:hover {
-            background-color: #f0f0f0;
-        }
-
-        .item:active {
-            background-color: rgba(128, 128, 128, 0.217);
         }
 
         .small-item-left {
@@ -140,31 +131,6 @@
         .item-description {
             text-align: center;
         }
-
-        /* Styles for the darkened background */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-        }
-
-        /* Styles for the popup */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            z-index: 1001;
-        }
     </style>
 </head>
 <body>
@@ -181,97 +147,54 @@
             Vehicle info goes here, on mobile it is collapsed.
         </div>
         <div class="item-list">
-            <button class="item showPopupButton">
+            <button class="item">
                 <div class="small-item-left">
                     <div class="item-icon"></div>
                 </div>
                 <div class="small-item-right">
                     <div class="item-number">Bridge 1</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-description">Bridge 1 Description helo helo helohelo helo helohelo helo helo</div>
                 </div>
             </button>
-            <button class="item showPopupButton">
+            <button class="item">
                 <div class="small-item-left">
                     <div class="item-icon"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 2</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-number">Bridge 1</div>
+                    <div class="item-description">Bridge 1 Description helo helo helohelo helo helohelo helo helo</div>
                 </div>
             </button>
-            <button class="item showPopupButton">
+            <button class="item">
                 <div class="small-item-left">
                     <div class="item-icon"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 3</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-number">Bridge 1</div>
+                    <div class="item-description">Bridge 1 Description helo helo helohelo helo helohelo helo helo</div>
                 </div>
             </button>
-            <button class="item showPopupButton">
+            <button class="item">
                 <div class="small-item-left">
                     <div class="item-icon"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 4</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-number">Bridge 1</div>
+                    <div class="item-description">Bridge 1 Description helo helo helohelo helo helohelo helo helo</div>
                 </div>
             </button>
-            <button class="item showPopupButton">
+            <button class="item">
                 <div class="small-item-left">
                     <div class="item-icon"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 5</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-number">Bridge 1</div>
+                    <div class="item-description">Bridge 1 Description helo helo helohelo helo helohelo helo helo</div>
                 </div>
             </button>
-            <button class="item showPopupButton">
-                <div class="small-item-left">
-                    <div class="item-icon"></div>
-                </div>
-                <div class="small-item-right">
-                    <div class="item-number">Bridge 6</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
-                </div>
-            </button>
-            <button class="item showPopupButton">
-                <div class="small-item-left">
-                    <div class="item-icon"></div>
-                </div>
-                <div class="small-item-right">
-                    <div class="item-number">Bridge 7</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
-                </div>
-            </button>
+            
             <!-- Add more items as needed -->
         </div>
-        <div class="overlay" id="overlay"></div>
-    <div class="popup" id="popup">
-        <h2>Bridge info</h2>
-        <p>Additional information about the bridge is displayed here. (taken from the dataset)</p>
-        <button id="closePopup">Close</button>
-    </div>
-
-    <script>
-        // JavaScript to show and hide the popup
-        const showPopupButtons = document.querySelectorAll(".showPopupButton");
-        const closePopupButton = document.getElementById("closePopup");
-        const overlay = document.getElementById("overlay");
-        const popup = document.getElementById("popup");
-
-        showPopupButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                overlay.style.display = "block";
-                popup.style.display = "block";
-            });
-        });
-
-        closePopupButton.addEventListener("click", () => {
-            overlay.style.display = "none";
-            popup.style.display = "none";
-        });
-    </script>   
     </div>
 </body>
 </html>
