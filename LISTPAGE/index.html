@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BridgeClear</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
 
         .navbar {
-            background-color: #b5b5b5;
+            background-color: #F4FAF9;
             position: relative;
-            color: #fff;
             padding: 10px 0;
             text-align: center;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 55px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            height: 120px;
         }
 
         .navbar-logo {
@@ -38,8 +37,11 @@
         }
 
         .logo {
-            max-height: 100%;
-            max-width: 100%;
+            position: absolute;
+            width: 210px;
+            margin-top: 125px;
+            z-index: 100000;
+            left: 70px;
         }
 
         .search-area {
@@ -61,7 +63,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             display: flex;
@@ -90,10 +92,9 @@
             padding: 10px;
             display: flex;
             flex-direction: row;
-            background-color: white;
+            background-color: #F4FAF9;
             align-items: center;
-            border-style: solid;
-            border-color: #f0f0f0;
+            border-style: none;
             border-radius: 10px;
         }
 
@@ -118,16 +119,17 @@
 
         .small-item-right {
             margin: 0px 5px 0px 5px;
-            padding: 10px;
+            padding: 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: left;
             margin-left: 10px;
             border-style: none;
             border-color: #f0f0f0;
             border-radius: 10px;
-            max-width: fit-content;
+            max-width: 100%;
+            height: 120px;
         }
 
         .item-icon {
@@ -141,16 +143,24 @@
         .bridge-pic {
             max-height: 100%;
             max-width: 100%;
-            border-radius: 50%;
+            border-radius: 10%;
         }
 
         .item-number {
-            text-align: center;
-            font-weight: bold;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 19px;
+            margin-bottom: 10px;
+            color: #003838;
         }
 
         .item-description {
-            text-align: center;
+            text-align: left;
+            line-height: 12px;
+            font-weight: 700;
+            color: #00A3AD;
         }
 
         /* Styles for the darkened background */
@@ -177,11 +187,41 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             z-index: 1001;
         }
+
+        .details-entry {
+            position: absolute;
+            right: 100px;
+            height: 45px;
+            width: 210px;
+            border-radius: 30px;
+        }
+
+        .details-button {
+            background-color: #074149;
+            position: relative;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+            color: #F4FAF9;
+            border-radius: 30px;
+            border-style: none;
+        }
+
+        .details-button:active {
+            opacity: 70%;
+        }
+
+        .height-description {
+            text-align: right;
+            line-height: 12px;
+            color: #00A3AD;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <div class="navbar-logo"><img src="/images/Logo-05.png" alt="logo" class="logo"></div>
+        <div class="navbar-logo"><img src="Logo-02.png" alt="logo" class="logo"></div>
+        <div class="details-entry"><button class="details-button">Enter Details</button></div>
     </div>
     <div class="search-area">
         <div class="search-bar">
@@ -195,65 +235,72 @@
         <div class="item-list">
             <button class="item showPopupButton">
                 <div class="small-item-left">
-                    <div class="item-icon"><img src="/images/bridge 1.jpg" class="bridge-pic"></div>
+                    <div class="item-icon"><img src="bridge 1.jpg" class="bridge-pic"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 1</div>
-                    <div class="item-description">Bridge Description Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="item-number">Cultural Centre Tunnel under Victoria Bridge - Northbound</div>
+                    <div class="item-description">South bank</div>
+                    <div class="height-description">Max clearance height: 4.4m</div>
                 </div>
             </button>
             <button class="item showPopupButton">
                 <div class="small-item-left">
-                    <div class="item-icon"><img src="/images/bridge 2.jpeg" class="bridge-pic"></div>
+                    <div class="item-icon"><img src="bridge 2.jpeg" class="bridge-pic"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 2</div>
-                    <div class="item-description">Bridge Description Bridge Description Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="item-number">Bridge under Cribb Street - Southbound towards the City</div>
+                    <div class="item-description">Milton</div>
+                    <div class="height-description">Max clearance height: 3.9m</div>
                 </div>
             </button>
             <button class="item showPopupButton">
                 <div class="small-item-left">
-                    <div class="item-icon"><img src="/images/bridge 3.jpg" class="bridge-pic"></div>
+                    <div class="item-icon"><img src="bridge 3.jpg" class="bridge-pic"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 3</div>
-                    <div class="item-description">Bridge Description Bridge Description Lorem ipsum dolor sit amet, consectetur adipiscing elito</div>
+                    <div class="item-number">Cultural Centre Tunnel under Victoria Bridge - Northbound</div>
+                    <div class="item-description">South bank</div>
+                    <div class="height-description">Max clearance height: 4.4m</div>
                 </div>
             </button>
             <button class="item showPopupButton">
                 <div class="small-item-left">
-                    <div class="item-icon"><img src="/images/bridge 4.jpeg" class="bridge-pic"></div>
+                    <div class="item-icon"><img src="bridge 4.jpeg" class="bridge-pic"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 4</div>
-                    <div class="item-description">Bridge Description Bridge Description Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="item-number">Cultural Centre Tunnel under Victoria Bridge - Northbound</div>
+                    <div class="item-description">South bank</div>
+                    <div class="height-description">Max clearance height: 4.4m</div>
                 </div>
             </button>
             <button class="item showPopupButton">
                 <div class="small-item-left">
-                    <div class="item-icon"><img src="/images/bridge 5.jpeg" class="bridge-pic"></div>
+                    <div class="item-icon"><img src="bridge 5.jpeg" class="bridge-pic"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 5</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-number">Cultural Centre Tunnel under Victoria Bridge - Northbound</div>
+                    <div class="item-description">South bank</div>
+                    <div class="height-description">Max clearance height: 4.4m</div>
                 </div>
             </button>
             <button class="item showPopupButton">
                 <div class="small-item-left">
-                    <div class="item-icon"><img src="/images/bridge 6.jpg" class="bridge-pic"></div>
+                    <div class="item-icon"><img src="bridge 6.jpg" class="bridge-pic"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 6</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-number">Cultural Centre Tunnel under Victoria Bridge - Northbound</div>
+                    <div class="item-description">South bank</div>
+                    <div class="height-description">Max clearance height: 4.4m</div>
                 </div>
             </button>
             <button class="item showPopupButton">
                 <div class="small-item-left">
-                    <div class="item-icon"><img src="/images/bridge 7.jpg" class="bridge-pic"></div>
+                    <div class="item-icon"><img src="bridge 7.jpg" class="bridge-pic"></div>
                 </div>
                 <div class="small-item-right">
-                    <div class="item-number">Bridge 7</div>
-                    <div class="item-description">Bridge Description helo helo helohelo helo helohelo helo helo</div>
+                    <div class="item-number">Cultural Centre Tunnel under Victoria Bridge - Northbound</div>
+                    <div class="item-description">South bank</div>
+                    <div class="height-description">Max clearance height: 4.4m</div>
                 </div>
             </button>
             <!-- Add more items as needed -->
