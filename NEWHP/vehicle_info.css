@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  align-items: center;
+  
+}
+
+header {
+    height: 150;
+    width: 1440;
+    background-color: #F4FAF9;
+    display: flex;
+}
+
+header img {
+    height: 60px;
+    width: 100px;
+    margin: 20px 20px 20px 20px;
+}
+
+.imgbox {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #E5E5E5;
+}
+
+.namebox {
+    height: 50px;
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#select1 {
+    height: 30px;
+    width: 300px;
+    background-color: #F4FAF9;
+    color: #00A3AD;
+    border: 1px solid #F4FAF9;
+    border-radius: 10px;
+}
+
+#select2 {
+    height: 30px;
+    width: 300px;
+    margin-top: 20px;
+    background-color: #F4FAF9;
+    color: #00A3AD;
+    border: 1px solid #F4FAF9;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #074149;
+    color: #FFFFFF;
+    height: 30px;
+    width: 150px;
+    margin-top: 20px;
+    border: 1px solid #074149;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 20px;
+}
+.heightbox {
+    height: 20px;
+    width: 300px;
+    font-weight: 200;
+    margin: auto;
+    color: #00A3AD;
+}
+
+.widthbox {
+    height: 20px;
+    width: 300px;
+    font-weight: 200;
+    margin:auto;
+    margin-top: 20px;
+    color: #00A3AD;
+}
+
+.box {
+    height: 20px;
+    width: 200px;
+    background-color: #F4FAF9;
+    border: 1px solid #F4FAF9;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: end;
+    padding-right: 5px;
+}
