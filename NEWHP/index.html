@@ -23,6 +23,11 @@
             height: 130px;
         }
 
+        .img0 {
+            width: 100%;
+            position: relative;
+        }
+
         .img1 {
             width: 100%;
             display: block;
@@ -77,23 +82,36 @@
             margin-bottom: 20px;
             font-size: 15px;
         }
+        .link2 {
+            background-color: #003E47;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-style: none;
+            border-radius: 50px;
+            font-size: large;
+            right: 25px;
+            width: 100%;
+            padding: 0px;
+            left: 0px;
+            z-index: 0.0001;
+        }
     </style>
     <title>BridgeClear</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="logo">
-            <img src="/Logo-04.png" alt="logonoworky" class="img1">
+            <img src="/NEWHP/Logo-04.png" alt="logonoworky" class="img0">
         </div>
         <div class="graphic">
-            <img src="/Asset 2 1.png" alt="logonoworky" class="img1">
+            <img src="/NEWHP/Asset 2 1.png" alt="logonoworky" class="img1">
         </div>
             <div class="buttonwrap">
                 <div class="buttons" onclick="testfunc()">
                     <button class="subbutton">Create Your Vehicle</button>
                 </div>
-                <div class="buttons" onclick="testfunc()">
-                    <button class="subbutton">See Bridges</button>
+                <div class="buttons">
+                    <button class="subbutton"><a href='/LISTPAGE/listindex.html' class="link2">See Bridges</a></button>
                 </div>
             </div>
         <div class="rights">© 2023 BridgeClear. All rights reserved.</div>
