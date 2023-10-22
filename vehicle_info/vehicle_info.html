@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="vehicle_info.css">
+    <title>Vehicle Info</title>
+</head>
+<body>
+    <header>
+        <img src="0_header_logo.png">
+    </header>
+    <div class="imgbox">
+        <img id="vehicleImage">
+    </div>
+    
+    <h2 id="vehicleName">Vehicle Name</h2>
+
+    <select id="brandSelect">
+    <option>Vehicle Brand</option></select>
+    <br>
+    <select id="modelSelect">
+    <option>Vehicle Model</option></select>
+    <br>
+    <button class="button" type="submit">Enter Car</button>
+    <br>
+    <h1>Enter your vehicle information manually</h1>
+    <br>
+    <div class="heightbox">
+        Height : <input type="text" class="box" placeholder="mm">
+    </div>
+    <div class="widthbox">
+        Width : <input type="text" class="box" placeholder="mm">
+    </div>
+    <button class="button" type="submit">Enter Information</button>
+
+    <script>
+    let brand = ["Hino", "Isuzu", "Kenworth", "Mack", "Mercedes"];
+    let Hino_model = ["300-917", "FE 500-1426"];
+    let Isuzu_model = ["NLR 45-150", "FRR 110-240", "FXD 165-350", "FYH 300-350"];
+    let Kenworth_model = ["T909"];
+    let Mack_model = ["Super-Liner"];
+    let Mercedes_model = ["Actros-2663", "Actros-2763"];
+    let brandSelect = document.getElementById("brandSelect");
+    let modelSelect = document.getElementById("modelSelect");
+
+    brand.forEach(function addBrand(item) {
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        brandSelect.appendChild(option);
+    });
+
+    brandSelect.onchange = function () {
+        modelSelect.innerHTML = "<option></option>";
+        if (this.value == "Hino") {
+            addTomodelSelect(Hino_model);
+        }
+        if (this.value == "Isuzu") {
+            addTomodelSelect(Isuzu_model);
+        }
+        if (this.value == "Kenworth") {
+            addTomodelSelect(Kenworth_model);
+        }
+        if (this.value == "Mack") {
+            addTomodelSelect(Mack_model);
+        }
+        if (this.value == "Mercedes") {
+            addTomodelSelect(Mercedes_model);
+        }
+
+    }
+    
+    function addTomodelSelect(arr) {
+        arr.forEach(function addModel(item) {
+            let option = document.createElement("option");
+            option.text = item;
+            option.value = item;
+            modelSelect.appendChild(option);
+        });
+    }
+
+    modelSelect.onchange = function () {
+        displayVehicleInfo();
+    }
+
+
+
+    function displayVehicleInfo() {
+        let brand = document.getElementById('brandSelect').value;
+        let model = document.getElementById('modelSelect').value;
+
+        let vehicleName = brand + ' ' + model;
+        let imageUrl = '';
+        if(brand === "Hino") {
+            if(model === "300-917") {
+                imageUrl = "img/300-917.jpeg";
+            }
+            if(model === "FE 500-1426") {
+                imageUrl = "img/FE500-1426.jpeg";
+            }
+            
+        }
+        if(brand === "Isuzu") {
+            if(model === "NLR 45-150") {
+                imageUrl = "img/NLR45-150.jpeg";
+            }
+            if(model === "FRR 110-240") {
+                imageUrl = "img/FRR110-240.jpeg";
+            }
+            if(model === "FXD 165-350") {
+                imageUrl = "img/FXD165-350.jpeg";
+            }
+            if(model === "FYH 300-350") {
+                imageUrl = "img/FYH300-350.jpeg";
+            }
+        }
+        if(brand === "Kenworth") {
+            if(model === "T909") {
+                imageUrl = "img/T909.jpeg";
+            }
+        }
+        if(brand === "Mack") {
+            if(model === "Super-Liner") {
+                imageUrl = "img/super-liner.jpeg";
+            }
+        }
+        if(brand === "Mercedes") {
+            if(model === "Actros-2663") {
+                imageUrl = "img/Actros2663.jpeg";
+            }
+            if(model === "Actros-2763") {
+                imageUrl = "img/Actros2763.jpeg";
+            }
+        }
+
+
+        document.getElementById('vehicleName').innerText = vehicleName;
+        document.getElementById('vehicleImage').src = imageUrl;
+    }
+
+    const vehicleDimension = [
+        {
+            brand: "Hino",
+            model: "300-917",
+            height: 2260,
+            width: 2190,
+        },
+
+        {
+            brand: "Hino",
+            model: "FE 500-1426",
+            height: 2515,
+            width: 2240,
+        }
+
+        {
+            brand: "Isuzu",
+            model: "NLR 45-150",
+            height: 2180,
+            width: 1855,
+        },
+
+        {
+            brand: "Isuzu",
+            model: "FRR 110-240",
+            height: 2605,
+            width: 2170,
+        },
+
+        {
+            brand: "Isuzu",
+            model: "FXD 165-350",
+            height: 2980,
+            width: 2445,
+        },
+
+        {
+            brand: "Isuzu",
+            model: "FYH 300-350",
+            height: 3000,
+            width: 2445,
+        },
+
+        {
+            brand: "Kenworth",
+            model: "T909",
+            height: 4023,
+            width: 2642,
+        },
+
+        {
+            brand: "Mack",
+            model: "Super-Liner",
+            height: 3800,
+            width: 2600,
+        },
+
+        {
+            brand: "Mercedes",
+            model: "Actros-2663",
+            height: 3423,
+            width: 2500,
+        },
+
+        {
+            brand: "Mercedes",
+            model: "Actros-2763",
+            height: 3902,
+            width: 2500,
+        },
+    ];
+    
+
+    
+    </script>
+        
+        
+</body>
+</html>
